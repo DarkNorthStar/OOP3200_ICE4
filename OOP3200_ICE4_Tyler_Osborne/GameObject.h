@@ -16,6 +16,7 @@
 class GameObject
 {
 public:
+	// constructors
 	GameObject();
 	GameObject(int id, float x, float y);
 	GameObject(int id, const Vector2D& position);
@@ -38,6 +39,7 @@ public:
 	std::string ToString() const;
 
 private:
+	// Variables
 	Vector2D postition;
 	int objectId;
 
