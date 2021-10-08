@@ -17,21 +17,22 @@ class GameObject
 {
 public:
 	GameObject();
-	GameObject(float x, float y);
-	GameObject(const Vector2D& position);
+	GameObject(int id, float x, float y);
+	GameObject(int id, const Vector2D& position);
 
 	// Rule of 3
 	~GameObject(); // Destructor
 	GameObject(const GameObject& gameObjectToCopy); // Copy Constructor
-	GameObject& operator=(int id, const GameObject& rightSideGameObject); // Assignment operator
+	GameObject& operator=(const GameObject& rightSideGameObject); // Assignment operator
 		
 	// Accessor
 	Vector2D GetPosition() const;
-	int GetId(); // I WAS HERE THANKS ME
+	int GetId() const;
 
 	// Mutator
 	void SetPosition(float x, float y);
 	void SetPosition(const Vector2D& newPosition);
+	void SetId(int id);
 
 	// Utility Functions
 	std::string ToString() const;
